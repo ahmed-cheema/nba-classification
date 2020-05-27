@@ -82,7 +82,15 @@ for n in ['FGM','FGA','FG2M','FG2A','FG3M','FG3A','FTM','FTA','OREB','DREB','REB
     
 # final cleaning up
 
-df.PLAYER_WEIGHT = pd.to_numeric(df.PLAYER_WEIGHT)
+df['PLAYER_WEIGHT'] = pd.to_numeric(df['PLAYER_WEIGHT'])
+df['PER'] = pd.to_numeric(df['PER'])
+df['OWS'] = pd.to_numeric(df['OWS'])
+df['WS'] = pd.to_numeric(df['WS'])
+df['WS/48'] = pd.to_numeric(df['WS/48'])
+df['OBPM'] = pd.to_numeric(df['OBPM'])
+df['BPM'] = pd.to_numeric(df['DBPM'])
+df['DBPM'] = pd.to_numeric(df['BPM'])
+df['VORP'] = pd.to_numeric(df['VORP'])
 df['AST_RATIO'].replace(np.inf,df.AST,inplace=True)
 
 df.fillna(0, inplace=True)
