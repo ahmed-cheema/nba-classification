@@ -1,0 +1,189 @@
+AGE: age
+GP: games played
+MIN: minutes played
+MPG: minutes played per game
+FGM: field goals made per 36 minutes
+FGA: field goals attempted per 36 minutes
+FG_PCT: field goal percentage
+FG2M: 2pt fgm per 36 minutes
+FG2A: 2pt fga per 36 minutes
+FG2_PCT: 2pt fg percentage
+FG3M: 3pt fgm per 36 minutes
+FG3A: 3pt fga per 36 minutes
+FG3_PCT: 3pt fg percentage
+FTM: free throws made per 36 minutes
+FTA: free throws attempted per 36 minutes
+FT_PCT: free throw percentage
+OREB: offensive rebounds per 36 minutes
+DREB: defensive rebounds per 36 minutes
+REB: rebounds per 36 minutes
+AST: assists per 36 minutes
+TOV: turnovers per 36 minutes
+STL: steals per 36 minutes
+BLK: blocks per 36 minutes
+BLKA: times blocked per 36 minutes
+PF: fouls committed per 36 minutes
+PFD: fouls drawn per 36 minutes
+PTS: points per 36 minutes
+EFG: effective field goal percentage
+C: binary indicator for position
+F: binary indicator for position
+G: binary indicator for position
+PLAYER_HEIGHT_INCHES: height in inches
+PLAYER_WEIGHT: weight in pounds
+NET_RATING: net rating
+OREB_PCT: offensive rebound percentage
+DREB_PCT: defensive rebound percentage
+USG_PCT: usage percentage
+TS_PCT: true shooting percentage
+AST_PCT: assist percentage
+AST_TO: assist / turnover ratio
+CONTESTED_SHOTS: contested shots per 36 minutes
+CONTESTED_SHOTS_2PT: contested 2pt shots per 36 minutes
+CONTESTED_SHOTS_3PT: contested 3pt shots per 36 minutes
+DEFLECTIONS: deflections per 36 minutes
+CHARGES_DRAWN: charges drawn per 36 minutes
+SCREEN_ASSISTS: screen assists per 36 minutes
+SCREEN_AST_PTS: points created via screen assists per 36 minutes
+OFF_LOOSE_BALLS_RECOVERED: offensive loose balls recovered per 36 minutes
+DEF_LOOSE_BALLS_RECOVERED: defensive loose balls recovered per 36 minutes
+LOOSE_BALLS_RECOVERED: loose balls recovered per 36 minutes
+OFF_BOXOUTS: offensive boxouts per 36 minutes
+DEF_BOXOUTS: defensive boxouts per 36 minutes
+BOX_OUT_PLAYER_TEAM_REBS: box out player team rebounds per 36 minutes
+BOX_OUT_PLAYER_REBS: box out player rebounds per 36 minutes
+BOX_OUTS: box outs per 36 minutes
+PASSES_MADE: passes made per 36 minutes
+PASSES_RECEIVED: passes received per 36 minutes
+FT_AST: free throw assists per 36 minutes
+SECONDARY_AST: secondary assists per 36 minutes
+POTENTIAL_AST: potential assists per 36 minutes
+AST_PTS_CREATED: assist points created per 36 minutes
+DIST_MILES: miles traveled per 36 minutes
+DIST_MILES_OFF: offensive miles traveled per 36 minutes
+DIST_MILES_DEF: defensive miles traveled per 36 minutes
+AVG_SPEED: average speed
+AVG_SPEED_OFF: average offensive speed
+AVG_SPEED_DEF: average defensive speed
+TOUCHES: touches per 36 minutes
+FRONT_CT_TOUCHES: front court touches per 36 minutes
+TIME_OF_POSS: total time possessing ball
+AVG_SEC_PER_TOUCH: average seconds per touch
+AVG_DRIB_PER_TOUCH: average dribbles per touch
+PTS_PER_TOUCH: points per touch
+ELBOW_TOUCHES: elbow touches per 36 minutes
+POST_TOUCHES: post touches per 36 minutes
+DRIVE_PTS: drive pts per 36 minutes
+DRIVE_FG_PCT: drive fg%
+CATCH_SHOOT_PTS: catch and shoot pts per 36 minutes
+CATCH_SHOOT_FG_PCT: catch and shoot fg%
+PULL_UP_PTS: pull up pts per 36 minutes
+PULL_UP_FG_PCT: pull up fg%
+PAINT_TOUCH_PTS: paint touch pts per 36 minutes
+PAINT_TOUCH_FG_PCT: paint touch fg%
+POST_TOUCH_PTS: post touch pts per 36 minutes
+POST_TOUCH_FG_PCT: post touch fg%
+ELBOW_TOUCH_PTS: elbow touch pts per 36 minutes
+ELBOW_TOUCH_FG_PCT: elbow touch fg%
+D_FGM: fgm allowed
+D_FGA: fga allowed
+D_FG_PCT: fg% allowed
+OFF_RATING: offensive rating
+DEF_RATING: defensive rating
+AST_RATIO: number of assists per 100 possessions used
+PACE: pace
+PTS_OFF_TOV: points off turnover per 36 minutes
+PTS_2ND_CHANCE: second chance points per 36 minutes
+PTS_FB: paints from fast break per 36 minutes
+PTS_PAINT: points from paint per 36 minutes
+DEF_WS: defensive win shares
+FTR: free throws per field goal attempt
+AVG_REB_DIST: average rebound distance
+REB_CHANCE_PCT: pct of rebounds by rebound chances
+REB_CHANCE_PCT_ADJ: adjusted rebound chance %
+REB_CHANCES: rebound chances per 36 minutes
+REB_CONTEST_PCT: pct of rebounds contested
+RAFGM: restricted area fgm per 36 minutes
+RAFGA: restricted area fga per 36 minutes
+RAFG_PCT: restricted area fg%
+PFGM: paint fgm per 36 minutes
+PFGA: paint fga per 36 minutes
+PFG_PCT: paint fg%
+MRFGM: mid range fgm per 36 minutes
+MRFGA: mid range fga per 36 minutes
+MRFG_PCT: mid range fg%
+LCFG3M: left corner 3pm per 36 minutes
+LCFG3A: left corner 3pa per 36 minutes
+LCFG3_PCT: left corner 3pt%
+RCFG3M: right corner 3pm per 36 minutes
+RCFG3A: right corner 3pa per 36 minutes
+RCFG3_PCT: right corner 3pt%
+CFG3M: corner 3pm per 36 minutes
+CFG3A: corner 3pa per 36 minutes
+CFG3_PCT: corner 3pt%
+ABFG3M: above the break 3pm per 36 minutes
+ABFG3A: above the break 3pa per 36 minutes
+ABFG3_PCT: above the break 3pt%
+PCT_FGA_2PT: pct of fga from 2pt
+PCT_FGA_3PT: pct of fga from 3pt
+PCT_PTS_2PT: pct of points from 2pts
+PCT_PTS_2PT_MR: pct of points from mid-range
+PCT_PTS_3PT: pct of points from 3pts
+PCT_PTS_FB: pct of points from fast breaks
+PCT_PTS_FT: pct of points from free throws
+PCT_PTS_OFF_TOV: pct of paints from turnovers
+PCT_PTS_PAINT: pct of pts from paint
+PCT_AST_2PM: pct of 2pm that are assisted
+PCT_UAST_2PM: pct of 2pm that are unassisted
+PCT_AST_3PM: pct of 3pm that are assisted
+PCT_UAST_3PM: pct of 3pm that are unassisted
+PCT_AST_FGM: pct of fgm that are assisted
+PCT_UAST_FGM: pct of fgm that are unassisted
+PIE: player impact estimate
+PCT_FGM: pct of team's fgm when on floor
+PCT_FGA: pct of team's fga when on floor
+PCT_FG3M: pct of team's fg3m when on floor
+PCT_FG3A: pct of team's fg3a when on floor
+PCT_FTM: pct of team's ftm when on floor
+PCT_FTA: pct of team's fta when on floor
+PCT_OREB: pct of team's oreb when on floor
+PCT_DREB: pct of team's dreb when on floor
+PCT_REB: pct of team's reb when on floor
+PCT_AST: pct of team's ast when on floor
+PCT_TOV: pct of team's tov when on floor
+PCT_STL: pct of team's stl when on floor
+PCT_BLK: pct of team's blk when on floor
+PCT_BLKA: pct of team's blka when on floor
+PCT_PF: pct of team's pf when on floor
+PCT_PFD: pct of team's pfd when on floor
+PCT_PTS: pct of team's pts when on floor
+OFB_PCT: pct of time player does not have ball
+TIME_OF_POSS_36: time possessing ball per 36 minutes
+ISO_POSS_PCT: percent of possessions that are isolation situations
+ISO_EFG_PCT: iso efg%
+ISO_PTS: iso points
+PRBH_POSS_PCT: percent of possessions that are pick-and-roll ball handler
+PRBH_EFG_PCT: pick-and-roll ball handler efg%
+PRBH_PTS: pick-and-roll ball handler points
+PRRM_POSS_PCT: percent of possessions that are pick-and-roll roll man
+PRRM_EFG_PCT: pick-and-roll roll man efg%
+PRRM_PTS: pick-and-roll roll man points
+SU_POSS_PCT: percent of possessions that are spot-up
+SU_EFG_PCT: spot-up efg%
+SU_PTS: spot-up points
+PCT_PTS_ISO: percent of points from isolation situations
+PCT_PTS_PRBH: percent of points from being pick-and-roll ball handler
+PCT_PTS_PRRM: percent of points from being pick-and-roll roll man
+PCT_PTS_SU: percent of points from spot-up situations
+PCT_PTS_DRIVES: percent of points from drives
+DRIVES: drives per 36 minutes
+DRIVE_AST_PCT: percent of drives in which player asists
+DRIVE_PASSES_PCT: percent of drives in which player passes
+PER: player efficiency rating
+OWS: offensive win shares
+WS: win shares
+WS/48: win shares per 48 minutes
+OBPM: offensive box plus minus
+DBPM: defensive box plus minus
+BPM: box plus minus
+VORP: value over replacement player
