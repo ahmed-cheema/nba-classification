@@ -328,12 +328,37 @@ columns = json['resultSets'][0]['headers']
 
 f_df = pd.DataFrame.from_records(data, columns=columns) # FORWARDS
 
-c_df['pos'] = 'C'
-g_df['pos'] = 'G'
-f_df['pos'] = 'F'
+c_df['position'] = 'C'
+g_df['position'] = 'G'
+f_df['position'] = 'F'
 
 pf = pd.concat([c_df,g_df,f_df]).reset_index(drop=True)
-pf = pf[['PLAYER_NAME','pos']]
-pf.columns = ['PLAYER_NAME','pos']
+pf = pf[['PLAYER_NAME','PLAYER_ID','AGE','MIN','position']]
+pf.columns = ['player','player_id','age','mp','position']
+
+row_list = []
+
+for n in pf.player.unique():
+    
+    tf = pf[pf.player == n].reset_index(drop=True)
+    posf = pd.DataFrame(tf.groupby('position')['mp'].sum()).sort_values(by='mp',ascending=False).reset_index(drop=False)
+    
+    pos1 = posf.position[0]
+
+    if posf.shape[0] > 1:
+        pos2 = posf.position[1]
+    else:
+        pos2 = None
+    if posf.shape[0] > 2:
+        pos3 = posf.position[2]
+    else:
+        pos3 = None
+    
+    dict1 = {'player':n,'pos1':pos1,'pos2':pos2,'pos3':pos3}
+    
+    row_list.append(dict1)
+    
+pfin = pd.DataFrame(row_list)[['player','pos1','pos2','pos3']]
+pfin.columns = ['PLAYER_NAME','POSITION','pos2','pos3']
 
 #############################
