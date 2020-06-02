@@ -29,36 +29,41 @@ final.columns = ['player','ssn','pos','vorp','pc1','pc2']
 
 # FINDING OPTIMAL NUMBER OF CLUSTERS (K) FOR K-MEANS CLUSTERING
 
+fig = plt.figure(figsize=(8,4))
+
+plt.subplots_adjust(wspace=0.3, hspace=None)
+
 plt.subplot(1,2,1)
 
 wcss = []
-for i in range(1, 21):
-    kmeans = KMeans(n_clusters=i, init='k-means++', max_iter=300, n_init=10, random_state=0)
+for n_clusters in range(2, 21):
+    kmeans = KMeans(n_clusters=n_clusters)
     kmeans.fit(principalComponents)
     wcss.append(kmeans.inertia_)
-plt.plot(range(1, 21), wcss)
-plt.scatter(range(1, 21), wcss)
+plt.plot(range(2, 21), wcss)
+plt.scatter(range(2, 21), wcss)
 plt.title('elbow method')
 plt.xlabel('number of clusters')
 plt.ylabel('wcss')
-plt.show()
 
-plt.subplot(1,2,1)
+plt.subplot(1,2,2)
 
 score_list = []
-for n_clusters in range(1, 21):
+for n_clusters in range(2, 21):
     local_score = []
     for n in range(1,10):
         clusterer = KMeans(n_clusters=n_clusters)
         preds = clusterer.fit_predict(principalComponents)
-        score = silhouette_score(df, preds)
+        score = silhouette_score(principalComponents, preds)
+        local_score.append(score)
     score_list.append(sum(local_score)/len(local_score))
-plt.plot(range(1, 21), score_list)
-plt.scatter(range(1, 21), score_list)
+plt.plot(range(2, 21), score_list)
+plt.scatter(range(2, 21), score_list)
 plt.title('silhouette method')
 plt.xlabel('number of clusters')
 plt.ylabel('silhouette score')
-plt.show()
+
+fig.tight_layout()
 
 # FINDING OPTIMAL NUMBER OF CLUSTERS (K) FOR GAUSSIAN MIXTURE MODEL
 
