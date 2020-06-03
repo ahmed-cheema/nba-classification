@@ -25,26 +25,3 @@ final = pd.concat([principalDf, testdf[['PLAYER_NAME']]], axis=1)
 
 final = final[['PLAYER_NAME','pc1','pc2']]
 final.columns = ['player','pc1','pc2']
-
-# K-MEANS CLUSTERING
-
-nx = final.loc[:,['pc1','pc2']].values
-
-kmeans = KMeans(n_clusters=8)
-kmeans.fit(x)
-y_kmeans = kmeans.predict(x)
-
-final['cluster'] = y_kmeans
-
-plt.scatter(nx[:, 0], nx[:, 1], c=y_kmeans, s=50, cmap='viridis',edgecolor='black')
-
-# HIERARCHICAL CLUSTERING
-
-plt.figure(figsize=(8,22))
-plt.title('NBA Hierarchical Clustering Dendrogram')
-dend = shc.dendrogram(shc.linkage(x, method='ward'),labels=list(testdf.PLAYER_NAME),orientation='left')
-
-plt.yticks(fontsize=8)
-plt.xlabel('Height')
-
-plt.tight_layout()
