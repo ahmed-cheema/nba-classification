@@ -84,3 +84,26 @@ gmm = GaussianMixture(n_components=8).fit(principalComponents)
 labels = gmm.predict(principalComponents)
 final['cluster'] = labels
 plt.scatter(nx[:, 0], nx[:, 1], c=labels, cmap='viridis', edgecolor='black')
+
+# POSITION DISTRIBUTION WITHIN CLUSTERS
+
+pdf = testdf.groupby(['cluster']).sum()[['C','F','G']]
+
+ind = np.arange(len(np.unique(labels)))
+width = 0.4
+
+p1 = plt.barh(ind,pdf['G'], width, color='r',label='G',edgecolor='black')
+p2 = plt.barh(ind,pdf['F'], width, color='g',left=pdf['G'],label='F',edgecolor='black')
+p3 = plt.barh(ind,pdf['C'], width, color='b',left=np.array(pdf['G'])+np.array(pdf['F']),label='C',edgecolor='black')
+
+plt.xlim(0,250)
+plt.xlabel('players')
+plt.title('distribution of positions in clusters')
+
+plt.gca().invert_yaxis()
+plt.gca().set_yticks(np.arange(8))
+plt.gca().set_yticklabels(['high-usage big men','versatile forwards','stretch forwards / big men','ball-dominant scorers','floor generals','traditional centers','sharpshooters','low-usage role players'])
+
+plt.legend(loc='best')
+
+plt.show()
