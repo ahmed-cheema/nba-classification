@@ -55,3 +55,15 @@ clf = Ridge(alpha=alpha)
 clf.fit(tf[features],tf.nrtg)
 
 coefficients = clf.coef_
+
+# PLOT COEFFICIENTS
+
+plt.scatter(coefficients,clusters,edgecolor='black')
+plt.axvline(x=0,c='black',linewidth=1)
+plt.rc('grid', linestyle='dashed',color='black',alpha=0.4)
+plt.grid()
+plt.title('net rating coefficients for player clusters')
+plt.xlabel('coefficient')
+plt.xlim(-1.5,2)
+plt.tight_layout()
+plt.show()
