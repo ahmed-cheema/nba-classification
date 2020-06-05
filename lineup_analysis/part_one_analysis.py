@@ -1,5 +1,7 @@
 from sklearn.linear_model import Ridge
 import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
 
 ################################################## CREATING CLUSTER COLUMNS AND CALCULATING BAYESIAN NET RATING
 
