@@ -2,7 +2,7 @@
 
 Project for classifying NBA players, determining player similarity, and analyzing NBA lineups
 
-- Data scraped from stats.nba.com
+- Data scraped from stats.nba.com & basketball-reference.com
 - Principal component analysis for dimensionality reduction
 - Gaussian mixture model clustering to classify players
 - Hierarchical agglomerative clustering to measure player similarity
