@@ -6,6 +6,30 @@ import numpy as np
 
 features = ['c1','c2','c3','c4','c5','c6','c7','c8'] 
 
+# HYPERPARAMETER TUNING MAX_DEPTH
+
+msk = np.random.rand(len(tf)) < 0.8
+train = tf[msk].reset_index(drop=True)
+test = tf[~msk].reset_index(drop=True)
+
+row_list = []
+
+for n in range(2,11):
+	model = XGBRegressor(max_depth=n,objective='reg:squarederror')
+	model.fit(train[features].values,train.nrtg.values)
+	score = model.score(test[features].values,test.nrtg.values)
+	dict1 = {'parameter':n,'score':score}
+	row_list.append(dict1)
+pdf = pd.DataFrame(row_list)
+
+plt.plot(pdf.parameter,pdf.score)
+plt.scatter(pdf.parameter,pdf.score)
+plt.xlabel('max_depth')
+plt.ylabel('score')
+plt.title('hyperparameter tuning (max_depth)')
+plt.tight_layout()
+plt.show()
+
 # FIT MODEL
     
 model = XGBRegressor(learning_rate = 0.1,
