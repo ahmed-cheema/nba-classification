@@ -87,12 +87,11 @@ plt.scatter(nx[:, 0], nx[:, 1], c=labels, cmap='viridis', edgecolor='black')
 
 # CLUSTER ANALYSIS
 
-testdf.groupby(['cluster']).mean()[[]] 
+# obtains list of features for which the avg value of that feature within a cluster is the highest/lowest among all clusters
 
 first = []
 last = []
 
-# obtains list of features for which the avg value of that feature within a cluster is the highest/lowest among all clusters
 mf = testdf.groupby(['cluster']).mean().reset_index(drop=False)
 for n in features:
     if mf.sort_values(by=n,ascending=False).reset_index(drop=True).cluster[0] == 2:
