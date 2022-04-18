@@ -1,0 +1,31 @@
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+import scipy.cluster.hierarchy as shc
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+testdf = df[(df.MPG > 23) & (df.GP > 15) & (df.SEASON == '2019-20')].reset_index(drop=True)
+
+features = [x for x in df.columns if (x != 'PLAYER_NAME') &  (x != 'POSITION') & (x != 'SEASON')]
+
+x = testdf.loc[:, features].values
+y = testdf.loc[:,['PLAYER_NAME']].values
+
+x = StandardScaler().fit_transform(x) # standardize all values
+
+pca = PCA(n_components=0.99)
+principalComponents = pca.fit_transform(x)
+
+# DENDROGRAM PLOT
+
+plt.figure(figsize=(8,22))
+plt.title('2019-20 NBA Hierarchical Clustering Dendrogram')
+dend = shc.dendrogram(shc.linkage(x, method='ward'),labels=list(testdf.PLAYER_NAME),orientation='left')
+
+plt.yticks(fontsize=8)
+plt.xlabel('Height')
+
+plt.tight_layout()
+
+plt.show()
